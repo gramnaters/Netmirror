@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: netmirror-stremio
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: TMDB_API_KEY
+        value: 439c478a771f35c05022f9feabcca01c
+      - key: PROXY_URL
+        value: http://novada540Clr_kEn6gM-zone-res-region-ae:K6h2YVaMCdoE@2325cb9e69cd4d8f.lwy.as.novada.pro:7777
+      - key: PORT
+        value: 10000
